@@ -1,0 +1,25 @@
+name: Feedback / ملاحظة على دواك
+description: Share a test result or suggestion. Please do not include personal or medical information.
+title: "[Feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: "هذا النموذج عام. لا تكتب بيانات طبية، بريدك، كلمة المرور، أو أي معلومات شخصية. This issue is public. Use fictional data only."
+  - type: input
+    id: device
+    attributes:
+      label: Phone model and Android version / نوع الهاتف وإصدار أندرويد
+      placeholder: "Example: Samsung A54, Android 14"
+  - type: dropdown
+    id: role
+    attributes:
+      label: Account role / نوع الحساب
+      options:
+        [Patient / مريض, Doctor / طبيب, Caregiver / مرافق, Website / الموقع]
+  - type: textarea
+    id: experience
+    attributes:
+      label: What happened? / ما الذي حدث؟
+      description: Include steps, expected result, and actual result using fictional data only.
+    validations:
+      required: true

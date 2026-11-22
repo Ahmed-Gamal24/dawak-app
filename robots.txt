@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ahmed-gamal24.github.io/dawak-app/sitemap.xml

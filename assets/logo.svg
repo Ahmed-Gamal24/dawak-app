@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="#0b6354"/><title>Dawak — medicine and care</title>
+  <defs><clipPath id="pill"><rect x="362" y="222" width="300" height="580" rx="150"/></clipPath></defs>
+  <g transform="rotate(-35 512 512)" clip-path="url(#pill)">
+    <rect x="362" y="222" width="300" height="580" fill="#f7f8f3"/>
+    <rect x="362" y="518" width="300" height="284" fill="#a8d9bf"/>
+    <path d="M362 511H662" stroke="#0b6354" stroke-width="14"/>
+  </g>
+  <path d="M529 605L565 641L636 558" fill="none" stroke="#0b6354" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b6354" />
+    <title>دواك — يومك أبسط. دواك في معاده.</title>
+    <meta
+      name="description"
+      content="دواك يجمع تذكيرات الدواء وروشتاتك ومتابعة من تحب في مكان واحد. اكتشف التطبيق وحمّل النسخة التجريبية لأندرويد مجانًا."
+    />
+    <link rel="canonical" href="https://ahmed-gamal24.github.io/dawak-app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ar_EG" />
+    <meta property="og:title" content="دواك — يومك أبسط. دواك في معاده." />
+    <meta
+      property="og:description"
+      content="تذكيرات لدوائك. روشتات في مكان واحد. ومتابعة تجمعك بمن يهمك. حمّل نسخة أندرويد التجريبية."
+    />
+    <meta
+      property="og:url"
+      content="https://ahmed-gamal24.github.io/dawak-app/"
+    />
+    <meta
+      property="og:image"
+      content="https://ahmed-gamal24.github.io/dawak-app/assets/app-icon.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="شعار دواك: كبسولة دواء بداخلها علامة تأكيد"
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/app-icon.png" />
+    <link
+      rel="preload"
+      href="assets/fonts/arabic-regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">انتقل إلى المحتوى</a>
+    <svg
+      class="icon-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="i-download" viewBox="0 0 24 24">
+        <path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24">
+        <path
+          d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4M3 4 1 7m20-3 2 3"
+        />
+      </symbol>
+      <symbol id="i-file" viewBox="0 0 24 24">
+        <path d="M14 2H5v20h14V7Zm0 0v5h5M8 12h8m-8 4h6" />
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path
+          d="M20 5c-3-3-7-1-8 1-1-2-5-4-8-1-5 5 3 11 8 15 5-4 13-10 8-15Z"
+        />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6ZM8 12l3 3 5-6" />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <rect x="6" y="2" width="12" height="20" rx="3" />
+        <path d="M10 18h4" />
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4" />
+        <path
+          d="M12 1v2m0 18v2M1 12h2m18 0h2M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"
+        />
+      </symbol>
+      <symbol id="i-people" viewBox="0 0 24 24">
+        <circle cx="9" cy="7" r="4" />
+        <path
+          d="M2 22v-4a7 7 0 0 1 14 0v4m1-19a4 4 0 0 1 0 8m2 4a6 6 0 0 1 3 5v2"
+        />
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#" aria-label="دواك — الصفحة الرئيسية"
+          ><img src="assets/logo.svg" width="46" height="46" alt="" /><span
+            >دواك<span class="brand-dot">.</span></span
+          ></a
+        >
+        <nav class="nav-links" aria-label="القائمة الرئيسية">
+          <a href="#features">ليه دواك؟</a><a href="#inside">جولة في التطبيق</a
+          ><a href="#faq">أسئلة شائعة</a>
+        </nav>
+        <a class="button button-small button-dark" href="#download"
+          >حمّل التطبيق <svg class="icon"><use href="#i-download" /></svg
+        ></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="little-pill" aria-hidden="true"></span> مساحة أبسط
+            للعناية بصحتك
+          </p>
+          <h1 id="hero-title">
+            يومك أبسط.<br /><span class="hero-accent">دواك في معاده.</span>
+          </h1>
+          <p class="hero-description">
+            وسط زحمة اليوم، خلّي لدواك مكان.<br />تذكيرات واضحة، وروشتات مترتبة،
+            ومتابعة تجمعك بالناس اللي يهمّهم أمرك.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark button-large" href="#download"
+              ><svg class="icon"><use href="#i-download" /></svg> حمّل دواك
+              لأندرويد</a
+            ><a class="text-link" href="#inside">شوف التطبيق من جوّه</a>
+          </div>
+          <p class="hero-note">
+            تحميل مجاني <span>·</span> نسخة تجريبية <span>·</span> بالعربي
+            والإنجليزي
+          </p>
+          <div class="hero-bottom">
+            <div class="mini-logo">
+              <svg class="icon"><use href="#i-heart" /></svg>
+            </div>
+            <p>
+              <strong>لك، وللي يهمّك.</strong><br />للمريض والطبيب والمرافق، كل
+              واحد له مساحته.
+            </p>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
+          <div class="floating-note note-time">
+            <span class="note-icon"
+              ><svg class="icon"><use href="#i-bell" /></svg></span
+            ><span
+              ><strong>حان وقت دواك</strong
+              ><small>خطوة صغيرة، كل يوم.</small></span
+            >
+          </div>
+          <figure class="hero-phone">
+            <div class="phone-bezel">
+              <div class="phone-camera" aria-hidden="true"></div>
+              <img
+                src="assets/screens/today.png"
+                alt="واجهة النهارده داخل دواك، تعرض موعد الجرعة وزر أخذت الدواء"
+                width="390"
+                height="844"
+                fetchpriority="high"
+              />
+            </div>
+            <figcaption>من واجهة التطبيق · بيانات توضيحية</figcaption>
+          </figure>
+          <div class="floating-note note-care">
+            <span class="care-check"
+              ><svg class="icon"><use href="#i-check" /></svg></span
+            ><span
+              ><strong>كل خطوة بتفرق</strong
+              ><small>سجّل جرعتك بنقرة.</small></span
+            >
+          </div>
+          <span class="art-label" aria-hidden="true"
+            >رعاية أقرب. يوم أهدى.</span
+          >
+        </div>
+      </section>
+
+      <div class="promise-bar">
+        <div class="container promise-inner">
+          <span
+            ><svg class="icon"><use href="#i-bell" /></svg> تذكير في معاد
+            الدواء</span
+          ><span
+            ><svg class="icon"><use href="#i-file" /></svg> روشتاتك في مكان
+            واحد</span
+          ><span
+            ><svg class="icon"><use href="#i-shield" /></svg> مشاركة سجلك
+            باختيارك</span
+          ><span
+            ><svg class="icon"><use href="#i-people" /></svg> مساحة لمتابعة من
+            تحب</span
+          >
+        </div>
+      </div>
+
+      <section
+        id="features"
+        class="section container"
+        aria-labelledby="features-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow">حاجات بسيطة. بتفرق في يومك.</p>
+          <h2 id="features-title">
+            بدل ما تفتكر كل حاجة،<br />خلّي دواك يساعدك.
+          </h2>
+          <p>ابدأ بالتذكير الشخصي، واستخدم باقي المميزات وقت ما تحتاجها.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature feature-main">
+            <div class="feature-top">
+              <span class="feature-icon"
+                ><svg class="icon"><use href="#i-bell" /></svg></span
+              ><span class="feature-tag">ابدأ من هنا</span>
+            </div>
+            <h3>تذكير يناسب يومك.</h3>
+            <p>
+              ضيف دواءك وحدد مواعيده بنفسك، حتى من غير طبيب مرتبط بحسابك. وعلى
+              أندرويد، فعّل المنبّه عشان تسمع موعد الجرعة.
+            </p>
+            <div class="reminder-preview" aria-hidden="true">
+              <div class="reminder-clock">09:00 <small>صباحًا</small></div>
+              <div class="reminder-line">
+                <span class="reminder-circle"
+                  ><svg class="icon"><use href="#i-check" /></svg></span
+                ><span>أخذت الدواء</span>
+              </div>
+            </div>
+            <p class="feature-footnote">
+              تشغيل المنبّه يحتاج أذونات الهاتف وضبط إعدادات البطارية.
+            </p>
+          </article>
+          <article class="feature">
+            <span class="feature-icon"
+              ><svg class="icon"><use href="#i-file" /></svg
+            ></span>
+            <h3>روشتات مرتبة، ترجع لها.</h3>
+            <p>
+              اسم الطبيب وتخصصه والتشخيص والأدوية في سجل واحد. اختار بنفسك تحويل
+              أدوية الروشتة لتذكيرات، أو شاركها بصيغة PDF.
+            </p>
+            <span class="feature-caption">التذكير اختيارك أنت.</span>
+          </article>
+          <article class="feature">
+            <span class="feature-icon"
+              ><svg class="icon"><use href="#i-pin" /></svg
+            ></span>
+            <h3>طبيب أقرب لما تحتاجه.</h3>
+            <p>
+              ابحث بين العيادات المنشورة للأطباء المعتمدين على المنصة. اختار
+              التخصص والمحافظة، وشوف موقع العيادة ومواعيدها.
+            </p>
+            <span class="feature-caption">بحث بالقائمة أو بالخريطة.</span>
+          </article>
+          <article class="feature">
+            <span class="feature-icon"
+              ><svg class="icon"><use href="#i-heart" /></svg
+            ></span>
+            <h3>متابعة، بموافقتك.</h3>
+            <p>
+              اسمح لطبيبك أو المرافق بالاطلاع على سجلك. تقارير مبسطة توضح
+              الجرعات اللي سجّلتها، مع إمكانية إنهاء المشاركة.
+            </p>
+            <span class="feature-caption">أنت تختار مين يشوف سجلك.</span>
+          </article>
+          <article class="feature">
+            <span class="feature-icon"
+              ><svg class="icon"><use href="#i-phone" /></svg
+            ></span>
+            <h3>النت فصل؟ يومك يكمل.</h3>
+            <p>
+              التنبيهات المحلية اللي اتجدولت تفضل شغالة، وتقدر ترجع لأدويتك
+              وروشتاتك المحفوظة على نفس الهاتف بعد مزامنتها.
+            </p>
+            <span class="feature-caption"
+              >المزامنة والخدمات الجديدة تحتاج إنترنت.</span
+            >
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="inside"
+        class="inside-section section"
+        aria-labelledby="inside-title"
+      >
+        <div class="container">
+          <div class="section-heading inside-heading">
+            <div>
+              <p class="eyebrow">مش مجرد كلام. خد لفة.</p>
+              <h2 id="inside-title">دواك، من جوّه.</h2>
+            </div>
+            <p>
+              صور من واجهات التطبيق الفعلية، ببيانات تجريبية للعرض.<br />اختار
+              الشاشة وشوف التفاصيل.
+            </p>
+          </div>
+          <div class="screen-selector" role="tablist" aria-label="شاشات دواك">
+            <button
+              id="tab-today"
+              class="screen-tab"
+              role="tab"
+              aria-selected="true"
+              aria-controls="screen-panel"
+              data-screen="today"
+            >
+              النهارده</button
+            ><button
+              id="tab-prescriptions"
+              class="screen-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="screen-panel"
+              tabindex="-1"
+              data-screen="prescriptions"
+            >
+              روشتاتي</button
+            ><button
+              id="tab-discover"
+              class="screen-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="screen-panel"
+              tabindex="-1"
+              data-screen="discover"
+            >
+              ابحث عن طبيب</button
+            ><button
+              id="tab-doctor"
+              class="screen-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="screen-panel"
+              tabindex="-1"
+              data-screen="doctor"
+            >
+              مساحة الطبيب</button
+            ><button
+              id="tab-caregiver"
+              class="screen-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="screen-panel"
+              tabindex="-1"
+              data-screen="caregiver"
+            >
+              مساحة المرافق
+            </button>
+          </div>
+          <div
+            id="screen-panel"
+            class="screen-panel"
+            role="tabpanel"
+            aria-labelledby="tab-today"
+            tabindex="0"
+          >
+            <div class="screen-copy">
+              <span id="screen-kicker" class="eyebrow"
+                >خطوة واحدة في كل مرة</span
+              >
+              <h3 id="screen-title">افتح يومك.<br />اعرف جرعتك الجاية.</h3>
+              <p id="screen-description">
+                موعد الدواء واضح، وتسجيل التناول بنقرة. مفيش داعي تراجع كل
+                الروشتات عشان تعرف عليك إيه النهارده.
+              </p>
+              <ul id="screen-points" class="check-list">
+                <li>عرض مواعيد جرعاتك</li>
+                <li>تسجيل أخذ الدواء بسهولة</li>
+                <li>تذكيرات تختارها بنفسك</li>
+              </ul>
+              <span class="screen-disclaimer"
+                >المعلومات والأسماء في الصور توضيحية، وليست بيانات مرضى.</span
+              >
+            </div>
+            <div class="screen-stage">
+              <div class="screen-stage-word" aria-hidden="true">دواك</div>
+              <div class="gallery-phone">
+                <img
+                  id="screen-image"
+                  src="assets/screens/today.png"
+                  alt="شاشة النهارده في دواك ببيانات توضيحية"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+          <noscript
+            ><p>
+              صور إضافية:
+              <a href="assets/screens/prescriptions.png">الروشتات</a> ·
+              <a href="assets/screens/discover.png">البحث عن طبيب</a> ·
+              <a href="assets/screens/doctor.png">مساحة الطبيب</a> ·
+              <a href="assets/screens/caregiver.png">مساحة المرافق</a>.
+            </p></noscript
+          >
+        </div>
+      </section>
+
+      <section
+        class="section container roles-section"
+        aria-labelledby="roles-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow">الرعاية مش دور واحد</p>
+          <h2 id="roles-title">كل واحد له دور.<br />والاهتمام بيجمعنا.</h2>
+        </div>
+        <div class="roles-grid">
+          <article class="role-card">
+            <span class="role-label">للمريض</span>
+            <h3>خليك متابع علاجك.</h3>
+            <p>
+              ابدأ بأدويتك ومواعيدها. احتفظ بروشتاتك، وشارك سجلك مع طبيبك أو شخص
+              تثق فيه لما تختار.
+            </p>
+          </article>
+          <article class="role-card">
+            <span class="role-label">للطبيب</span>
+            <h3>صورة أوضح لمريضك.</h3>
+            <p>
+              بعد موافقة المريض، راجع السجل العلاجي، واكتب روشتة، وتابع الجرعات
+              المسجّلة. وأضف عياداتك بعد اعتماد حسابك.
+            </p>
+          </article>
+          <article class="role-card">
+            <span class="role-label">للمرافق</span>
+            <h3>ابقَ قريب، حتى من بعيد.</h3>
+            <p>
+              اطلب متابعة من تحب. بعد موافقته، اطلع على أدويته وسجله وتقارير
+              الجرعات اللي سجّلها.
+            </p>
+          </article>
+        </div>
+        <p class="roles-note">
+          <svg class="icon"><use href="#i-shield" /></svg> تقارير الجرعات تعتمد
+          على تسجيل المستخدم، ولا تُثبت تناول الدواء فعليًا.
+        </p>
+      </section>
+
+      <section
+        id="download"
+        class="download-section"
+        aria-labelledby="download-title"
+      >
+        <div class="container download-grid">
+          <div class="download-copy">
+            <img
+              class="download-logo"
+              src="assets/logo.svg"
+              width="74"
+              height="74"
+              alt="شعار دواك"
+            />
+            <p class="eyebrow">نسخة أندرويد التجريبية</p>
+            <h2 id="download-title">
+              مساحة أصغر للقلق.<br />ومكان أوضح لدواك.
+            </h2>
+            <p>
+              جرّب دواك مجانًا، وشاركنا تجربتك.<br />النسخة الحالية للاختبار
+              ببيانات تجريبية فقط.
+            </p>
+            <a
+              id="apk-download"
+              class="button button-light button-large"
+              href="https://github.com/Ahmed-Gamal24/dawak-app/releases/download/v0.7.0-preview/dawak-0.7.0-preview.apk"
+              ><svg class="icon"><use href="#i-download" /></svg> تنزيل APK
+              لأندرويد</a
+            >
+            <p class="download-meta">
+              <bdi>v0.7.0</bdi> <span>·</span> <bdi>56.4 MiB</bdi>
+              <span>·</span> أندرويد 7 أو أحدث · 64 بت
+            </p>
+            <a
+              class="release-link"
+              href="https://github.com/Ahmed-Gamal24/dawak-app/releases/tag/v0.7.0-preview"
+              target="_blank"
+              rel="noopener noreferrer"
+              >تفاصيل النسخة وبصمة التحقق</a
+            >
+            <div class="download-counter">
+              <strong id="download-count" aria-live="polite">—</strong
+              ><span
+                >مرة تنزيل للنسخة الحالية<small id="counter-status"
+                  >العداد من GitHub، ولا يمثل عدد التثبيتات.</small
+                ></span
+              >
+            </div>
+          </div>
+          <div class="install-card">
+            <p class="eyebrow">أول مرة تثبّت ملف APK؟</p>
+            <h3>من التنزيل لأول استخدام.</h3>
+            <ol class="install-steps">
+              <li>
+                <span class="step-mark"
+                  ><svg class="icon"><use href="#i-download" /></svg
+                ></span>
+                <div>
+                  <h4>نزّل النسخة</h4>
+                  <p>
+                    افتح الصفحة من هاتف أندرويد واضغط «تنزيل APK». على
+                    الكمبيوتر، افتح نفس الرابط من هاتفك.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="step-mark"
+                  ><svg class="icon"><use href="#i-phone" /></svg
+                ></span>
+                <div>
+                  <h4>افتح الملف وثبّته</h4>
+                  <p>
+                    قد يطلب أندرويد السماح لهذا المتصفح بتثبيت التطبيق. اسمح له
+                    إذا كنت تثق بالمصدر، ثم أوقف الإذن بعد التثبيت. لا تعطّل
+                    حماية Play Protect.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="step-mark"
+                  ><svg class="icon"><use href="#i-bell" /></svg
+                ></span>
+                <div>
+                  <h4>أنشئ حسابك، واضبط التذكير</h4>
+                  <p>
+                    فعّل بريدك، ثم جرّب إضافة دواء ببيانات توضيحية. اسمح بأذونات
+                    التنبيه والمنبّه، واختبر الرنين على هاتفك.
+                  </p>
+                </div>
+              </li>
+            </ol>
+            <div class="qr-handoff">
+              <img
+                src="assets/download-qr.svg"
+                width="108"
+                height="108"
+                alt="رمز QR لفتح صفحة تنزيل دواك على الهاتف"
+                loading="lazy"
+              />
+              <div>
+                <strong>فاتح من الكمبيوتر؟</strong>
+                <p>امسح الكود بكاميرا موبايلك لفتح صفحة التنزيل عليه.</p>
+              </div>
+            </div>
+            <div class="beta-note">
+              <strong>قبل ما تبدأ</strong>
+              <p>
+                دي نسخة اختبار وليست بديلًا عن وصفة الطبيب أو منبّهك الأساسي.
+                استخدم بيانات تجريبية، واحتفظ بوسيلة تذكير بديلة خلال التجربة.
+                غير متاحة حاليًا لآيفون.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="faq"
+        class="section container faq-section"
+        aria-labelledby="faq-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow">إجابات على السريع</p>
+          <h2 id="faq-title">قبل ما تسأل.</h2>
+          <p>كل اللي يهمك تعرفه قبل التجربة.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>هل أحتاج طبيب عشان أستخدم دواك؟</summary>
+            <p>
+              لا. تقدر تضيف أدويتك وتحدد مواعيد التذكير بنفسك. ربط حسابك بطبيب
+              أو مرافق اختياري، ويحتاج موافقتك.
+            </p>
+          </details>
+          <details>
+            <summary>هل التطبيق يشتغل من غير إنترنت؟</summary>
+            <p>
+              التنبيهات المحلية المجدولة تعمل على الهاتف دون إنترنت بعد إعدادها
+              ومنح الأذونات المطلوبة. الأدويه والروشتات المحفوظة بعد المزامنة
+              متاحة على نفس الهاتف. التسجيل والبحث والروشتات الجديدة والمزامنة
+              تحتاج اتصالًا. إعدادات البطارية والأذونات قد تؤثر على الرنين؛
+              اختبره على جهازك.
+            </p>
+          </details>
+          <details>
+            <summary>هل كل روشتة بتتحول لتنبيهات تلقائيًا؟</summary>
+            <p>
+              لا. اختار قائمة الخيارات الخاصة بالروشتة، ثم اختار تحويل الأدوية
+              لتذكيرات. تقدر كمان تصدّر الروشتة PDF وتشاركها.
+            </p>
+          </details>
+          <details>
+            <summary>ليه التطبيق مش موجود على Google Play؟</summary>
+            <p>
+              دواك حاليًا في مرحلة التجربة المبكرة. بنوزّع نسخة أندرويد من خلال
+              هذه الصفحة وGitHub Releases. تحميل الملف لا يعني أنه خضع لمراجعة
+              Google Play، والنسخة مخصصة للاختبار ببيانات تجريبية فقط.
+            </p>
+          </details>
+          <details>
+            <summary>هل ينفع أحمله على آيفون؟</summary>
+            <p>
+              ملف APK يعمل على أندرويد فقط. لا توجد نسخة آيفون موزّعة حاليًا،
+              وسنعلن عن أي نسخة مستقبلية عند إتاحتها.
+            </p>
+          </details>
+          <details>
+            <summary>مين يقدر يشوف سجلي؟</summary>
+            <p>
+              الاطلاع من الطبيب أو المرافق يحتاج طلب مشاركة تقبله أنت، ويمكن
+              إنهاء المشاركة. خلال النسخة التجريبية، استخدم بيانات غير حقيقية؛
+              المشروع ما زال يخضع للاختبار والتحسين.
+            </p>
+          </details>
+          <details>
+            <summary>إزاي أشارك ملاحظة أو مشكلة؟</summary>
+            <p>
+              افتح
+              <a
+                href="https://github.com/Ahmed-Gamal24/dawak-app/issues/new?template=feedback.yml"
+                target="_blank"
+                rel="noopener noreferrer"
+                >نموذج الملاحظات على GitHub</a
+              >، واكتب نوع الهاتف ووصف الخطوات. يحتاج حساب GitHub، والملاحظات
+              عامة؛ لا ترفق بيانات طبية أو كلمات مرور أو معلومات شخصية.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <a class="brand" href="#" aria-label="دواك — أعلى الصفحة"
+          ><img src="assets/logo.svg" width="46" height="46" alt="" /><span
+            >دواك<span class="brand-dot">.</span></span
+          ></a
+        >
+        <p>رعاية أقرب. يوم أهدى.</p>
+        <div class="footer-links">
+          <a href="privacy.html">الخصوصية</a
+          ><a
+            href="https://github.com/Ahmed-Gamal24/dawak-app/issues/new?template=feedback.yml"
+            target="_blank"
+            rel="noopener noreferrer"
+            >شاركنا رأيك</a
+          ><a href="#download">حمّل دواك</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >© <span id="year">2026</span> دواك · مشروع تخرج، ونسخة في مرحلة
+          الاختبار.</span
+        ><span>دواك ينظّم العلاج، ولا يصفه. القرارات الطبية لطبيبك.</span>
+      </div>
+    </footer>
+  </body>
+</html>
