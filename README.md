@@ -18,6 +18,20 @@ python3 -m http.server 8788 --bind 127.0.0.1
 
 Open http://127.0.0.1:8788. HTML works without JavaScript; the screenshot tabs and counter progressively enhance the page. Fonts, icons, and screenshots are local. Font licensing is in `assets/fonts/NOTICE.txt`.
 
+## Promotional video
+
+The `#watch` section follows the introduction and links to the APK download section.
+The supplied 37.8-second portrait video is served directly from `assets/video/` with
+its original H.264/AAC encoding and bytes preserved (3,807,295 bytes; SHA-256
+`a7da1bbe9e4e033e4fe05cd59ccb5f38eb44c1dfd652584288c9f904c760e016`).
+The JPEG poster is a frame extracted at seven seconds. No external video host,
+tracking embed, paid service, or additional Azure resource is used.
+
+The video uses `preload="none"`, inline playback, native controls, and no autoplay.
+A play-button overlay enhances the player when JavaScript is available. Native
+controls and a direct video link remain available without JavaScript, with an
+inline message if playback fails. The video is displayed in its 9:16 proportions.
+
 ## Publishing
 
 The repository's GitHub Pages source is **GitHub Actions**. Pull requests run static checks and counter tests. Pushes to `main` publish only the allowlisted site files, excluding scripts, Git metadata, and APK binaries. GitHub Pages and public GitHub Releases are used within their free usage limits; there are no added Azure resources or paid website services.

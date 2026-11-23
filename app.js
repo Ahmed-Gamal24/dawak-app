@@ -119,6 +119,32 @@ tabs.forEach((tab, index) => {
   });
 });
 
+const promoVideo = document.querySelector("#promo-video");
+const promoPlay = document.querySelector("#promo-play");
+const promoError = document.querySelector("#promo-error");
+if (promoVideo && promoPlay && promoError) {
+  // Native controls remain available when JavaScript is disabled or playback fails.
+  promoPlay.hidden = false;
+  const showPlaybackError = () => {
+    promoPlay.hidden = true;
+    promoError.hidden = false;
+  };
+  promoPlay.addEventListener("click", () => {
+    promoError.hidden = true;
+    promoPlay.hidden = true;
+    if (promoVideo.ended) promoVideo.currentTime = 0;
+    promoVideo.play().catch(showPlaybackError);
+  });
+  promoVideo.addEventListener("play", () => {
+    promoPlay.hidden = true;
+    promoError.hidden = true;
+  });
+  promoVideo.addEventListener("ended", () => {
+    promoPlay.hidden = false;
+  });
+  promoVideo.addEventListener("error", showPlaybackError);
+}
+
 document.querySelector("#year").textContent = String(new Date().getFullYear());
 let storage;
 try {

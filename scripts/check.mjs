@@ -6,7 +6,9 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 for (const name of ["index.html", "privacy.html", "styles.css", "app.js"]) {
   const source = await readFile(resolve(root, name), "utf8");
   const paths = [
-    ...source.matchAll(/(?:src|href)="([^"#]+)"|url\(['"]?([^'"\)]+)['"]?\)/g),
+    ...source.matchAll(
+      /(?:src|href|poster)="([^"#]+)"|url\(['"]?([^'"\)]+)['"]?\)/g,
+    ),
   ];
   for (const match of paths) {
     const asset = match[1] || match[2];
