@@ -21,10 +21,11 @@ Open http://127.0.0.1:8788. HTML works without JavaScript; the screenshot tabs a
 ## Promotional video
 
 The `#watch` section follows the introduction and links to the APK download section.
-The supplied 37.8-second portrait video is served directly from `assets/video/` with
-its original H.264/AAC encoding and bytes preserved (3,807,295 bytes; SHA-256
-`a7da1bbe9e4e033e4fe05cd59ccb5f38eb44c1dfd652584288c9f904c760e016`).
-The JPEG poster is a frame extracted at seven seconds. No external video host,
+The supplied 59.23-second portrait video is served directly from `assets/video/` with
+its original H.264/AAC encoding and bytes preserved (5,444,417 bytes; SHA-256
+`6de6b4f77e37aac81e1fd106d85cabe9f5ded14f6f65688447efdd906f648ceb`).
+The active file is `assets/video/dawak-promo-v9.mp4`; versioned filenames prevent
+browsers from reusing the previous video or poster from cache. The JPEG poster is a frame extracted at eight seconds. No external video host,
 tracking embed, paid service, or additional Azure resource is used.
 
 The video uses `preload="none"`, inline playback, native controls, and no autoplay.
