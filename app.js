@@ -119,30 +119,54 @@ tabs.forEach((tab, index) => {
   });
 });
 
-const promoVideo = document.querySelector("#promo-video");
-const promoPlay = document.querySelector("#promo-play");
-const promoError = document.querySelector("#promo-error");
-if (promoVideo && promoPlay && promoError) {
-  // Native controls remain available when JavaScript is disabled or playback fails.
-  promoPlay.hidden = false;
+function initializeVideoPlayer(video, playButton, errorMessage) {
+  if (!video || !playButton || !errorMessage) return;
+  // Native controls and direct links work independently of this enhancement.
+  playButton.hidden = false;
   const showPlaybackError = () => {
-    promoPlay.hidden = true;
-    promoError.hidden = false;
+    playButton.hidden = true;
+    errorMessage.hidden = false;
   };
-  promoPlay.addEventListener("click", () => {
-    promoError.hidden = true;
-    promoPlay.hidden = true;
-    if (promoVideo.ended) promoVideo.currentTime = 0;
-    promoVideo.play().catch(showPlaybackError);
+  playButton.addEventListener("click", () => {
+    errorMessage.hidden = true;
+    playButton.hidden = true;
+    if (video.ended) video.currentTime = 0;
+    video.play().catch((error) => {
+      // Switching to another guide can cancel a pending play request.
+      if (error.name !== "AbortError") showPlaybackError();
+    });
   });
-  promoVideo.addEventListener("play", () => {
-    promoPlay.hidden = true;
-    promoError.hidden = true;
+  video.addEventListener("play", () => {
+    for (const other of document.querySelectorAll("video")) {
+      if (other !== video) other.pause();
+    }
+    playButton.hidden = true;
+    errorMessage.hidden = true;
   });
-  promoVideo.addEventListener("ended", () => {
-    promoPlay.hidden = false;
+  video.addEventListener("pause", () => {
+    if (!video.error) playButton.hidden = false;
   });
-  promoVideo.addEventListener("error", showPlaybackError);
+  video.addEventListener("ended", () => {
+    playButton.hidden = false;
+  });
+  video.addEventListener("error", showPlaybackError);
+  // A failed <source> can leave play() pending without a video-level error.
+  for (const source of video.querySelectorAll("source")) {
+    source.addEventListener("error", showPlaybackError);
+  }
+}
+
+initializeVideoPlayer(
+  document.querySelector("#promo-video"),
+  document.querySelector("#promo-play"),
+  document.querySelector("#promo-error"),
+);
+for (const player of document.querySelectorAll("[data-guide-player]")) {
+  initializeVideoPlayer(
+    player.querySelector("video"),
+    player.querySelector("[data-guide-play]"),
+    player.querySelector("[data-guide-error]"),
+  );
 }
 
 document.querySelector("#year").textContent = String(new Date().getFullYear());
