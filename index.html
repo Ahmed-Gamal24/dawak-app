@@ -52,6 +52,9 @@
       <symbol id="i-download" viewBox="0 0 24 24">
         <path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4" />
       </symbol>
+      <symbol id="i-play" viewBox="0 0 24 24">
+        <path d="m9 5 11 7-11 7Z" fill="currentColor" stroke="none" />
+      </symbol>
       <symbol id="i-check" viewBox="0 0 24 24">
         <path d="m5 12 4 4L19 6" />
       </symbol>
@@ -128,7 +131,7 @@
             <a class="button button-dark button-large" href="#download"
               ><svg class="icon"><use href="#i-download" /></svg> حمّل دواك
               لأندرويد</a
-            ><a class="text-link" href="#inside">شوف التطبيق من جوّه</a>
+            ><a class="text-link" href="#watch">شوف دواك في ٣٨ ثانية</a>
           </div>
           <p class="hero-note">
             تحميل مجاني <span>·</span> نسخة تجريبية <span>·</span> بالعربي
@@ -199,6 +202,79 @@
           >
         </div>
       </div>
+
+      <section
+        id="watch"
+        class="promo-section container"
+        aria-labelledby="promo-title"
+      >
+        <div class="promo-card">
+          <div class="promo-copy">
+            <p class="eyebrow">خد فكرة، في ٣٨ ثانية.</p>
+            <h2 id="promo-title">رعاية تكمل معاك،<br />وسط يومك.</h2>
+            <p class="promo-description">
+              من معاد الدواء لروشتتك الجاية، شوف إزاي دواك بيساعدك تنظّم علاجك،
+              وتتابعه مع طبيبك واللي يهمّهم أمرك.
+            </p>
+            <div class="promo-roles" aria-label="أدوار مستخدمي دواك">
+              <span
+                ><svg class="icon"><use href="#i-heart" /></svg> للمريض</span
+              >
+              <span
+                ><svg class="icon"><use href="#i-file" /></svg> للطبيب</span
+              >
+              <span
+                ><svg class="icon"><use href="#i-people" /></svg> للمرافق</span
+              >
+            </div>
+            <a class="button button-dark" href="#download"
+              >جرّب دواك لأندرويد
+              <svg class="icon"><use href="#i-download" /></svg
+            ></a>
+            <p class="promo-note">نسخة تجريبية · تحميل مجاني</p>
+          </div>
+          <figure class="promo-media">
+            <div class="promo-player">
+              <video
+                id="promo-video"
+                controls
+                playsinline
+                preload="none"
+                width="1080"
+                height="1920"
+                poster="assets/video/dawak-promo-poster.jpg"
+                aria-label="الفيديو التعريفي لتطبيق دواك"
+                aria-describedby="promo-caption"
+              >
+                <source src="assets/video/dawak-promo.mp4" type="video/mp4" />
+                متصفحك لا يدعم تشغيل الفيديو.
+                <a href="assets/video/dawak-promo.mp4">افتح فيديو دواك مباشرة</a
+                >.
+              </video>
+              <button
+                id="promo-play"
+                class="promo-play"
+                type="button"
+                aria-label="تشغيل فيديو دواك التعريفي بالصوت"
+                hidden
+              >
+                <span class="promo-play-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-play" /></svg
+                ></span>
+                <span>شاهد الفيديو</span>
+              </button>
+            </div>
+            <figcaption id="promo-caption">
+              تذكيرات، وروشتات، ومتابعة أقرب. <span>٠:٣٨</span>
+              <a href="assets/video/dawak-promo.mp4">افتح الفيديو</a>
+            </figcaption>
+            <p id="promo-error" class="promo-error" role="status" hidden>
+              تعذّر تشغيل الفيديو هنا. جرّب رابط «افتح الفيديو».
+            </p>
+          </figure>
+        </div>
+      </section>
 
       <section
         id="features"
