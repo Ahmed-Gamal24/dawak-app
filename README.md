@@ -33,6 +33,29 @@ A play-button overlay enhances the player when JavaScript is available. Native
 controls and a direct video link remain available without JavaScript, with an
 inline message if playback fails. The video is displayed in its 9:16 proportions.
 
+## Role-specific usage guides
+
+The `#guides` section sits after the app tour and before the download section.
+Its patient, doctor and caregiver cards each contain the supplied portrait
+walkthrough, an extracted JPEG cover, its duration and a direct video link.
+The navigation, footer and installation instructions link to this section.
+Individual cards can also be linked with `#guide-patient`, `#guide-doctor` and
+`#guide-caregiver`.
+
+Videos in `assets/video/guides/` preserve the supplied H.264/AAC files byte for
+byte. Filenames retain the supplied version suffixes to avoid stale media caches.
+Covers are extracted at eight seconds and resized to 540 × 960. All four players,
+including the promotional video, have native controls and `preload="none"`;
+none autoplays. JavaScript adds play/resume overlays, pauses other players when
+one starts, and displays a direct-link fallback if playback fails. Without
+JavaScript, the browser's controls and direct links still work.
+
+| Guide     | Duration | Bytes      | SHA-256                                                            |
+| --------- | -------- | ---------- | ------------------------------------------------------------------ |
+| Patient   | 3:08     | 13,593,266 | `1380125995eed87614930ccb9ed7f0d0dbdc569d1ee7264f23b704b4c23462e5` |
+| Doctor    | 2:30     | 11,798,472 | `4b451b4780aa82b5b2633c200fa86ac87d807c5ff4dd7d12ad10bc17c204556b` |
+| Caregiver | 1:33     | 7,475,978  | `6aaf4c93a6fca2b9ba77afd4975f181afe7b04eb1acd3a8f281f94d40835fc80` |
+
 ## Publishing
 
 The repository's GitHub Pages source is **GitHub Actions**. Pull requests run static checks and counter tests. Pushes to `main` publish only the allowlisted site files, excluding scripts, Git metadata, and APK binaries. GitHub Pages and public GitHub Releases are used within their free usage limits; there are no added Azure resources or paid website services.

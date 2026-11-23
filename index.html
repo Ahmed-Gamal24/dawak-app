@@ -82,6 +82,10 @@
         <rect x="6" y="2" width="12" height="20" rx="3" />
         <path d="M10 18h4" />
       </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </symbol>
       <symbol id="i-sun" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="4" />
         <path
@@ -105,7 +109,7 @@
         >
         <nav class="nav-links" aria-label="القائمة الرئيسية">
           <a href="#features">ليه دواك؟</a><a href="#inside">جولة في التطبيق</a
-          ><a href="#faq">أسئلة شائعة</a>
+          ><a href="#guides">دليل الاستخدام</a><a href="#faq">أسئلة شائعة</a>
         </nav>
         <a class="button button-small button-dark" href="#download"
           >حمّل التطبيق <svg class="icon"><use href="#i-download" /></svg
@@ -485,39 +489,216 @@
       </section>
 
       <section
+        id="guides"
         class="section container roles-section"
-        aria-labelledby="roles-title"
+        aria-labelledby="guides-title"
       >
         <div class="section-heading">
-          <p class="eyebrow">الرعاية مش دور واحد</p>
-          <h2 id="roles-title">كل واحد له دور.<br />والاهتمام بيجمعنا.</h2>
+          <p class="eyebrow">ابدأ مع دواك</p>
+          <h2 id="guides-title">
+            أول مرة تستخدم دواك؟<br />دليلك، خطوة بخطوة.
+          </h2>
+          <p>
+            من إنشاء الحساب للاستخدام اليومي. اختار دورك وشوف الشرح الخاص بيك.
+          </p>
         </div>
-        <div class="roles-grid">
-          <article class="role-card">
-            <span class="role-label">للمريض</span>
-            <h3>خليك متابع علاجك.</h3>
-            <p>
-              ابدأ بأدويتك ومواعيدها. احتفظ بروشتاتك، وشارك سجلك مع طبيبك أو شخص
-              تثق فيه لما تختار.
+        <nav class="guide-shortcuts" aria-label="اختار دليل الاستخدام">
+          <a href="#guide-patient">دليل المريض</a>
+          <a href="#guide-doctor">دليل الطبيب</a>
+          <a href="#guide-caregiver">دليل المرافق</a>
+        </nav>
+        <div class="roles-grid guides-grid">
+          <article
+            id="guide-patient"
+            class="role-card guide-card"
+            aria-labelledby="guide-patient-title"
+          >
+            <div class="guide-heading">
+              <span class="role-label">للمريض</span
+              ><span class="guide-duration"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-clock" /></svg
+                ><time datetime="PT3M8S">٣:٠٨</time></span
+              >
+            </div>
+            <h3 id="guide-patient-title">دليل المريض</h3>
+            <p class="guide-description">
+              ابدأ بأدويتك ومواعيدها، واحتفظ بروشتاتك وشارك سجلك مع من تختار.
             </p>
+            <figure class="guide-media" data-guide-player>
+              <div class="promo-player guide-player">
+                <video
+                  id="guide-patient-video"
+                  controls
+                  playsinline
+                  preload="none"
+                  width="1080"
+                  height="1920"
+                  poster="assets/video/guides/dawak-guide-patient-8b8ef675-poster.jpg"
+                  aria-label="فيديو دليل المريض: التسجيل واستخدام دواك"
+                  aria-describedby="guide-patient-caption"
+                >
+                  <source
+                    src="assets/video/guides/dawak-guide-patient-8b8ef675.mp4"
+                    type="video/mp4"
+                  />
+                  متصفحك لا يدعم تشغيل الفيديو.
+                  <a href="assets/video/guides/dawak-guide-patient-8b8ef675.mp4"
+                    >افتح دليل المريض مباشرة</a
+                  >.
+                </video>
+                <button
+                  class="promo-play"
+                  data-guide-play
+                  type="button"
+                  aria-label="تشغيل دليل المريض بالصوت"
+                  hidden
+                >
+                  <span class="promo-play-icon"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-play" /></svg></span
+                  ><span>شاهد دليل المريض</span>
+                </button>
+              </div>
+              <figcaption id="guide-patient-caption">
+                <a href="assets/video/guides/dawak-guide-patient-8b8ef675.mp4"
+                  >افتح دليل المريض منفردًا</a
+                >
+              </figcaption>
+              <p class="promo-error" data-guide-error role="status" hidden>
+                تعذّر تشغيل الفيديو هنا. جرّب رابط «افتح دليل المريض منفردًا».
+              </p>
+            </figure>
           </article>
-          <article class="role-card">
-            <span class="role-label">للطبيب</span>
-            <h3>صورة أوضح لمريضك.</h3>
-            <p>
-              بعد موافقة المريض، راجع السجل العلاجي، واكتب روشتة، وتابع الجرعات
-              المسجّلة. وأضف عياداتك بعد اعتماد حسابك.
+          <article
+            id="guide-doctor"
+            class="role-card guide-card"
+            aria-labelledby="guide-doctor-title"
+          >
+            <div class="guide-heading">
+              <span class="role-label">للطبيب</span
+              ><span class="guide-duration"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-clock" /></svg
+                ><time datetime="PT2M30S">٢:٣٠</time></span
+              >
+            </div>
+            <h3 id="guide-doctor-title">دليل الطبيب</h3>
+            <p class="guide-description">
+              سجّل حسابك المهني، وأضف مرضاك وعياداتك وتابع السجل العلاجي.
             </p>
+            <figure class="guide-media" data-guide-player>
+              <div class="promo-player guide-player">
+                <video
+                  id="guide-doctor-video"
+                  controls
+                  playsinline
+                  preload="none"
+                  width="1080"
+                  height="1920"
+                  poster="assets/video/guides/dawak-guide-doctor-005fd851-poster.jpg"
+                  aria-label="فيديو دليل الطبيب: التسجيل واستخدام دواك"
+                  aria-describedby="guide-doctor-caption"
+                >
+                  <source
+                    src="assets/video/guides/dawak-guide-doctor-005fd851.mp4"
+                    type="video/mp4"
+                  />
+                  متصفحك لا يدعم تشغيل الفيديو.
+                  <a href="assets/video/guides/dawak-guide-doctor-005fd851.mp4"
+                    >افتح دليل الطبيب مباشرة</a
+                  >.
+                </video>
+                <button
+                  class="promo-play"
+                  data-guide-play
+                  type="button"
+                  aria-label="تشغيل دليل الطبيب بالصوت"
+                  hidden
+                >
+                  <span class="promo-play-icon"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-play" /></svg></span
+                  ><span>شاهد دليل الطبيب</span>
+                </button>
+              </div>
+              <figcaption id="guide-doctor-caption">
+                <a href="assets/video/guides/dawak-guide-doctor-005fd851.mp4"
+                  >افتح دليل الطبيب منفردًا</a
+                >
+              </figcaption>
+              <p class="promo-error" data-guide-error role="status" hidden>
+                تعذّر تشغيل الفيديو هنا. جرّب رابط «افتح دليل الطبيب منفردًا».
+              </p>
+            </figure>
           </article>
-          <article class="role-card">
-            <span class="role-label">للمرافق</span>
-            <h3>ابقَ قريب، حتى من بعيد.</h3>
-            <p>
-              اطلب متابعة من تحب. بعد موافقته، اطلع على أدويته وسجله وتقارير
-              الجرعات اللي سجّلها.
+          <article
+            id="guide-caregiver"
+            class="role-card guide-card"
+            aria-labelledby="guide-caregiver-title"
+          >
+            <div class="guide-heading">
+              <span class="role-label">للمرافق</span
+              ><span class="guide-duration"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-clock" /></svg
+                ><time datetime="PT1M33S">١:٣٣</time></span
+              >
+            </div>
+            <h3 id="guide-caregiver-title">دليل المرافق</h3>
+            <p class="guide-description">
+              اطلب متابعة من تحب، وتعرّف على أدويته وسجله بعد موافقته.
             </p>
+            <figure class="guide-media" data-guide-player>
+              <div class="promo-player guide-player">
+                <video
+                  id="guide-caregiver-video"
+                  controls
+                  playsinline
+                  preload="none"
+                  width="1080"
+                  height="1920"
+                  poster="assets/video/guides/dawak-guide-caregiver-deecbb9d-poster.jpg"
+                  aria-label="فيديو دليل المرافق: التسجيل واستخدام دواك"
+                  aria-describedby="guide-caregiver-caption"
+                >
+                  <source
+                    src="assets/video/guides/dawak-guide-caregiver-deecbb9d.mp4"
+                    type="video/mp4"
+                  />
+                  متصفحك لا يدعم تشغيل الفيديو.
+                  <a
+                    href="assets/video/guides/dawak-guide-caregiver-deecbb9d.mp4"
+                    >افتح دليل المرافق مباشرة</a
+                  >.
+                </video>
+                <button
+                  class="promo-play"
+                  data-guide-play
+                  type="button"
+                  aria-label="تشغيل دليل المرافق بالصوت"
+                  hidden
+                >
+                  <span class="promo-play-icon"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-play" /></svg></span
+                  ><span>شاهد دليل المرافق</span>
+                </button>
+              </div>
+              <figcaption id="guide-caregiver-caption">
+                <a href="assets/video/guides/dawak-guide-caregiver-deecbb9d.mp4"
+                  >افتح دليل المرافق منفردًا</a
+                >
+              </figcaption>
+              <p class="promo-error" data-guide-error role="status" hidden>
+                تعذّر تشغيل الفيديو هنا. جرّب رابط «افتح دليل المرافق منفردًا».
+              </p>
+            </figure>
           </article>
         </div>
+        <p class="guides-note">
+          الفيديوهات بتشتغل لما تضغط عليها. تقدر توقف الشرح وتكمله في أي وقت.
+        </p>
         <p class="roles-note">
           <svg class="icon"><use href="#i-shield" /></svg> تقارير الجرعات تعتمد
           على تسجيل المستخدم، ولا تُثبت تناول الدواء فعليًا.
@@ -615,6 +796,9 @@
                 </div>
               </li>
             </ol>
+            <a class="install-guide-link" href="#guides"
+              >شوف دليل الاستخدام المناسب ليك</a
+            >
             <div class="qr-handoff">
               <img
                 src="assets/download-qr.svg"
@@ -729,7 +913,7 @@
             target="_blank"
             rel="noopener noreferrer"
             >شاركنا رأيك</a
-          ><a href="#download">حمّل دواك</a>
+          ><a href="#guides">دليل الاستخدام</a><a href="#download">حمّل دواك</a>
         </div>
       </div>
       <div class="container footer-bottom">

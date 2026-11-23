@@ -1996,3 +1996,154 @@ details > p {
     font-size: 14px;
   }
 }
+
+/* Role-specific guides share the site's player controls and preserve portrait video. */
+.guides-grid {
+  gap: 24px;
+  align-items: stretch;
+}
+.guide-shortcuts {
+  display: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.guide-shortcuts a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--green);
+  font-size: 14px;
+  text-decoration: none;
+}
+@media (max-width: 900px) {
+  .guide-shortcuts {
+    display: flex;
+  }
+}
+.guide-card,
+.guide-card:last-child {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--light);
+  min-width: 0;
+}
+.guide-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.guide-duration {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+.guide-duration .icon {
+  width: 17px;
+  height: 17px;
+}
+.guide-duration time {
+  direction: ltr;
+}
+.guide-card .guide-description {
+  min-height: 6em;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+.guide-media {
+  margin-top: auto;
+}
+.guide-player {
+  border-radius: 18px;
+  box-shadow: none;
+}
+.guide-player .promo-play-icon {
+  width: 64px;
+  height: 64px;
+}
+.guide-media figcaption {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 14px;
+}
+.guide-media figcaption a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--green);
+}
+.guides-note {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+}
+.install-guide-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  margin-top: 15px;
+  color: var(--green);
+  font-size: 15px;
+  font-weight: 700;
+}
+@media (min-width: 621px) and (max-width: 900px) {
+  .guides-grid {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    margin-inline: auto;
+  }
+  .guide-card,
+  .guide-card:last-child {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 230px);
+    column-gap: 24px;
+    align-content: start;
+  }
+  .guide-heading,
+  .guide-card h3,
+  .guide-card .guide-description {
+    grid-column: 1;
+  }
+  .guide-card .guide-description {
+    min-height: 0;
+  }
+  .guide-media {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    margin-top: 0;
+  }
+}
+@media (max-width: 620px) {
+  .guides-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 390px;
+    margin-inline: auto;
+  }
+  .guide-card,
+  .guide-card:last-child {
+    padding: 22px;
+    border: 1px solid var(--line);
+  }
+  .guide-card .guide-description {
+    min-height: 0;
+    font-size: 16px;
+  }
+  .guide-card h3 {
+    margin-top: 10px;
+  }
+  .guide-media {
+    width: min(100%, 300px);
+    margin-inline: auto;
+  }
+}
