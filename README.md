@@ -4,7 +4,7 @@ Public Arabic landing page and Android beta distribution for **دواك**. This 
 
 - Website: https://ahmed-gamal24.github.io/dawak-app/
 - APK releases: https://github.com/Ahmed-Gamal24/dawak-app/releases
-- Feedback: use this repository's issue template. Never post patient information, credentials, or private screenshots.
+- Feedback: https://forms.gle/94a5uQCWXbfw3zW47. Never submit patient information, credentials, or private screenshots.
 
 ## Development
 
@@ -56,6 +56,14 @@ JavaScript, the browser's controls and direct links still work.
 | Doctor    | 2:30     | 11,798,472 | `4b451b4780aa82b5b2633c200fa86ac87d807c5ff4dd7d12ad10bc17c204556b` |
 | Caregiver | 1:33     | 7,475,978  | `6aaf4c93a6fca2b9ba77afd4975f181afe7b04eb1acd3a8f281f94d40835fc80` |
 
+## Feedback
+
+The feedback card after the usage guides, FAQ and footer open the owner's
+Google Form in a new tab. The privacy page uses the same link. This is a plain
+external link: the website does not embed Google Forms, submit responses, add
+Google scripts, or require a GitHub account to send feedback. Response storage
+and optional email notifications are managed in the owner's Google Forms account.
+
 ## Publishing
 
 The repository's GitHub Pages source is **GitHub Actions**. Pull requests run static checks and counter tests. Pushes to `main` publish only the allowlisted site files, excluding scripts, Git metadata, and APK binaries. GitHub Pages and public GitHub Releases are used within their free usage limits; there are no added Azure resources or paid website services.
@@ -88,4 +96,4 @@ The APK is a signed local **preview**, not a Play Store release. Native static a
 
 ## Privacy
 
-There are no website analytics, advertising scripts, account forms, or medical-data uploads. The only website local-storage value is the public download-count cache. Hosting and API requests go to GitHub. The website's Arabic privacy notice describes this and the Azure-hosted beta; it does not claim to be a completed production medical-app privacy policy.
+There are no website analytics, advertising scripts, account forms, or medical-data uploads. The only website local-storage value is the public download-count cache. Hosting and API requests go to GitHub. Feedback links open an external Google Form only when clicked. The website's Arabic privacy notice describes this, the external feedback form and the Azure-hosted beta; it does not claim to be a completed production medical-app privacy policy.
