@@ -23,7 +23,7 @@ const html = await readFile(resolve(root, "index.html"), "utf8");
 assert.match(html, /lang="ar" dir="rtl"/);
 assert.match(
   html,
-  /releases\/download\/v0\.7\.0-preview\/dawak-0\.7\.0-preview\.apk/,
+  /releases\/download\/v0\.8\.0-preview\/dawak-0\.8\.0-preview\.apk/,
 );
 assert.ok(
   !/127\.0\.0\.1|localhost/.test(html),
