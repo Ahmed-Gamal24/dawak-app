@@ -14,7 +14,7 @@ for (const name of ["index.html", "privacy.html", "styles.css", "app.js"]) {
     const asset = match[1] || match[2];
     if (/^(https?:|data:|\.\/)/.test(asset)) continue;
     assert.ok(
-      (await stat(resolve(root, asset))).isFile(),
+      (await stat(resolve(root, asset.split(/[?#]/, 1)[0]))).isFile(),
       `Missing local asset: ${asset}`,
     );
   }

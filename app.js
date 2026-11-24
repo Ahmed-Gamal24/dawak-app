@@ -1,4 +1,4 @@
-import { loadDownloadCount } from "./counter.js";
+import { loadDownloadCount } from "./counter.js?v=downloads-total-v1";
 
 const screens = {
   today: {
@@ -190,5 +190,5 @@ status.textContent =
   result.state === "unavailable"
     ? "العداد غير متاح مؤقتًا؛ التنزيل متاح كالمعتاد."
     : result.state === "stale"
-      ? "آخر عدد محفوظ. مرات تنزيل الملف، وليس عدد التثبيتات."
-      : "مرات تنزيل الملف من GitHub؛ ليست عدد أشخاص أو تثبيتات.";
+      ? "آخر إجمالي محفوظ لكل الإصدارات؛ ليس عدد التثبيتات."
+      : "إجمالي تنزيلات كل الإصدارات من GitHub؛ ليس عدد أشخاص أو تثبيتات.";
