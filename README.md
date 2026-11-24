@@ -82,17 +82,21 @@ The counter reads `download_count` for the exact APK asset from the public GitHu
 
 | Field           | Value                                                                 |
 | --------------- | --------------------------------------------------------------------- |
-| Tag             | `v0.7.0-preview`                                                      |
-| APK             | `dawak-0.7.0-preview.apk`                                             |
-| Version         | `0.7.0` / code `7`                                                    |
+| Tag             | `v0.8.0-preview`                                                      |
+| APK             | `dawak-0.8.0-preview.apk`                                             |
+| Version         | `0.8.0` / code `8`                                                    |
 | Package         | `dev.smartmedication.preview`                                         |
 | Minimum Android | 7.0 / API 24                                                          |
 | Architectures   | arm64-v8a, x86_64                                                     |
-| Size            | 59,165,732 bytes (56.4 MiB)                                           |
-| SHA-256         | `5c0993c12c3f127690f4c6b3f06360dcae88ebd6f72dae21480f8f82216607ca`    |
+| Size            | 59,171,556 bytes (56.4 MiB)                                           |
+| SHA-256         | `073e6ad0a4c04eee1457f320f872c152230878a01c44f33837d96605cc557a22`    |
 | API             | `https://dawak-staging-a58269c4-be.belgiumcentral.cloudapp.azure.com` |
 
-The APK is a signed local **preview**, not a Play Store release. Native static alignment/security checks passed, but this cloud build still needs real-phone acceptance testing. The beta is for fictional test data only, with a backup reminder method. Server-side push providers are not configured; do not advertise guaranteed remote push delivery. No fabricated testimonials, installation numbers, clinical claims, or patient records appear on the site.
+This release adds public doctor/clinic directory results and an optional notice for future Android updates. Reference-data coverage is limited; missing specialties, phone numbers and hours are not invented. Public search data does not create physician accounts or grant access to patient records.
+
+The package and signing certificate match 0.7.0. An isolated Android emulator install-over check retained the application UID, first installation time and saved Arabic preference. Install the new APK over the existing app; do not uninstall it. Version 0.7.0 users need to download this first update manually. The new optional update checker opens this website for later releases.
+
+The APK is a signed local **preview**, not a Play Store release. Native static alignment/security checks passed; real-phone acceptance testing remains necessary, including medication alarm behavior. The beta is for fictional test data only, with a backup reminder method. Server-side push providers are not configured; do not advertise guaranteed remote push delivery. No fabricated testimonials, installation numbers, clinical claims, or patient records appear on the site.
 
 ## Privacy
 

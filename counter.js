@@ -1,8 +1,8 @@
 // Counts GitHub release-asset downloads, not installs, people, or button clicks.
 export const RELEASE = Object.freeze({
   repository: "Ahmed-Gamal24/dawak-app",
-  tag: "v0.7.0-preview",
-  assetName: "dawak-0.7.0-preview.apk",
+  tag: "v0.8.0-preview",
+  assetName: "dawak-0.8.0-preview.apk",
 });
 export const CACHE_KEY = `dawak-downloads:${RELEASE.tag}`;
 export const CACHE_TTL = 15 * 60 * 1000;
