@@ -73,10 +73,10 @@ Before changing the published APK:
 1. Verify the build uses the public HTTPS API origin, not a laptop address or localhost. Never upload environment files or signing keys.
 2. Test the artifact, note its version, required Android version, size, and SHA-256, and create a versioned **prerelease** in this public repository.
 3. Attach the APK and checksum file to that release. Do not commit the binary to Git.
-4. Update `index.html`, `counter.js`, the release metadata below, and the exact-link check in `scripts/check.mjs` together in a pull request.
+4. Update `index.html`, the release metadata below, and the exact-link check in `scripts/check.mjs` together in a pull request. Keep previous APK release assets: the cumulative counter is independent of the current download version.
 5. Verify the workflow, public site, download URL, hash, and counter after release publication.
 
-The counter reads `download_count` for the exact APK asset from the public GitHub release API. It measures **file downloads**, including repeated requests and tests, not installs or distinct users. A browser caches the value for 15 minutes to reduce unauthenticated API calls. A stale value is labeled; unavailable is displayed as a dash, never an invented zero. The download link works independently of JavaScript and the counter API. Changing the release tag intentionally starts the displayed count for the new release; it is not an all-time total.
+The counter sums `download_count` for canonical Dawak APK assets across all published releases, including previews/betas, using the paginated public GitHub releases API. It excludes drafts, checksums, videos and unrelated files. Previous release downloads remain in the total when a new APK is published. Keep historical release assets; GitHub does not expose download history for deleted assets through this API. It measures **file downloads**, including repeated requests and tests, not installs or distinct users. A stable browser cache lasts 15 minutes across APK updates. Partial API failures retain a labeled stale total or display a dash; they never replace it with a partial sum or invented zero. Versioned script URLs invalidate the former per-release counter code/cache during this correction. The download link works independently of JavaScript and the counter API.
 
 ## Current Android preview
 
